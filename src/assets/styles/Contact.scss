@@ -1,0 +1,82 @@
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  // Optional background color or gradient:
+  background: linear-gradient(365deg, #0d1116, #2f2e2e);
+}
+
+.contact-form-container {
+  background-color: #ffffff; // or use your theme color
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  color: #fff;
+
+  .form-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #0d1116;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+
+    .MuiFormControl-root {
+      margin-bottom: 1rem;
+    }
+
+    button[type="submit"] {
+      background-color: #6200ee; // or your brand color
+      color: #fff;
+      padding: 0.75rem 1.25rem;
+      text-align: center;
+      font-size: medium;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #4a00b5; // slightly darker shade
+      }
+    }
+  }
+
+  .submit-result {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: monospace;
+    color: #0fc082; // greenish color for success or adapt to your theme
+  }
+
+  .social-links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    a {
+      color: #fff; 
+      transition: color 0.2s ease;
+      &:hover {
+        color: #0fc082; // accent color on hover
+      }
+    }
+  }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+  .contact-form-container {
+    padding: 1rem;
+
+    .form-title {
+      font-size: 1.5rem;
+      color: #0d1116;
+    }
+  }
+}
