@@ -2,7 +2,7 @@ import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import "../assets/styles/Main.scss";
-import { Box, Typography, IconButton } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { styled } from '@mui/system';
 
 import pfp from "../assets/images/pfpp.jpg";
