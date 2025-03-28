@@ -2,7 +2,7 @@ import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import "../assets/styles/Main.scss";
-import { Box, Typography, Paper, IconButton } from '@mui/material';
+import { Box, Typography, IconButton } from '@mui/material';
 import { styled } from '@mui/system';
 
 import pfp from "../assets/images/pfpp.jpg";
@@ -48,26 +48,6 @@ const ContentBox = styled(Box)(({ theme }) => ({
     textAlign: 'center',
   },
 }));
-
-// Container for social icons with hover effects
-const SocialIconsContainer = styled(Box)(({ theme }) => ({
-  marginTop: theme.spacing(2),
-  display: 'flex',
-  gap: theme.spacing(2),
-  justifyContent: 'flex-start',
-  [theme.breakpoints.down('sm')]: {
-    justifyContent: 'center',
-  },
-}));
-
-const SocialIconButton = styled(IconButton)(({ theme }) => ({
-  color: theme.palette.primary.main,
-  transition: 'transform 0.3s ease',
-  '&:hover': {
-    transform: 'scale(1.2)',
-  },
-}));
-
 
 function Main() {
   return (

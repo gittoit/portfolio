@@ -3,8 +3,6 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
 import TextField from "@mui/material/TextField";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import "../assets/styles/Contact.scss";
 
 function Contact() {
