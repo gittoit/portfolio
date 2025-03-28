@@ -47,6 +47,7 @@ function Contact() {
             fullWidth
             label="Name"
             name="name"
+            id="name"
             required
             sx={{ marginBottom: "1rem" }}
           />
@@ -55,6 +56,7 @@ function Contact() {
             label="Email"
             name="email"
             type="email"
+            id="email"
             required
             sx={{ marginBottom: "1rem" }}
           />
@@ -62,6 +64,7 @@ function Contact() {
             fullWidth
             label="Message"
             name="message"
+            id="message"
             required
             multiline
             rows={4}

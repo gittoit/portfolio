@@ -92,7 +92,7 @@ function Main() {
 
       <div className="resume-button-container">
         <a
-          href="https://drive.google.com/file/d/124GbaEKd8DzL3gE4Cs8VsMCRZqLZFXG7/view?usp=sharing"
+          href="https://drive.google.com/file/d/1-jIWYQ0fWVRyE0mrHevdZw_LpP-H2ZxC/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="resume-btn"
