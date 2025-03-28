@@ -1,161 +1,189 @@
 .about-section {
-    display: flex;
-    gap: 30px;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    padding: 0 15%;
-    min-height: 700px;
-    background-image: url("../images/bg-dark.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-  
-    h1 {
-      font-size: 5em;
-      margin-block-start: 0;
-      margin-block-end: 0;
-    }
+  display: flex;
+  gap: 30px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 0 15%;
+  min-height: 700px;
+  background-image: url("../images/bg-dark.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+
+  h1 {
+    font-size: 5em;
+    margin-block-start: 0;
+    margin-block-end: 0;
   }
-  
-  .about-section .content {
-    text-align: left;
-    z-index: 2;
-  
-    .social_icons {
-      display: flex;
-      flex-direction: row;
-      gap: 10px;
-      color: white;
-      margin-bottom: 1rem;
-  
-      svg {
-        font-size: 1.8em;
-      }
-    }
-  
-    h1 {
-      font-size: 5em;
-      margin: 0;
-    }
-  
+}
+
+/* If you show your image, you can optionally keep .image-wrapper */
+.image-wrapper {
+  z-index: 2;
+}
+
+/* Profile image with added border & hover effects */
+.profile-image {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  object-fit: contain;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+  /* Slightly boost saturation & contrast for crispness */
+  filter: saturate(1.15) contrast(1.05);
+
+  /* Add a subtle border */
+  border: 3px solid #fff;
+
+  /* Smooth transitions */
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    /* Slight scale and gentle rotation */
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.content {
+  text-align: left;
+  z-index: 2;
+
+  p {
+    font-size: 1.5em;
+    margin: 0;
+  }
+}
+
+/* Container that aligns name & icons horizontally. */
+.name-and-icons {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 1rem; /* space between the name and the icons */
+  margin-bottom: 0.5rem;
+
+  h1 {
+    margin: 0;
+    font-size: 5em;
+    line-height: 1.1;
+  }
+}
+
+.icons-inline {
+  display: flex;
+  gap: 0.6rem; /* space between icons */
+  margin-top: 0.2rem; /* offset if needed for vertical alignment */
+
+  svg {
+    font-size: 1.8em;
+  }
+}
+
+/* Resume button */
+.resume-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -5rem;
+}
+
+.resume-btn {
+  background-color: #005bbb;
+  color: white;
+  font-size: 1.1em;
+  padding: 15px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    background-color: #554dff;
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    padding: 2rem;
+    background-attachment: scroll;
+    min-height: 25rem;
+  }
+
+  .image-wrapper {
+    margin-bottom: 2rem;
+  }
+
+  .content {
+    text-align: center;
+
     p {
-      font-size: 1.5em;
-      margin: 0;
+      font-size: 1.2em;
     }
   }
-  
-  .about-section .image-wrapper {
-    z-index: 2;
-  }
-  
-  /* Updated profile-image class for bigger size & slight sharpening */
-  .profile-image {
-    width: 20rem;          
-    height: 20rem;          
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
-  
-    /* Slight saturation & contrast for a crisper look */
-    filter: saturate(1.15) contrast(1.05);
-  }
-  
-  .resume-button-container {
-    display: flex;
+
+  .name-and-icons {
     justify-content: center;
-    margin-top: -5rem; 
+    h1 {
+      font-size: 2.5em;
+    }
   }
-  
+
+  .icons-inline {
+    svg {
+      font-size: 1.5em; /* smaller icons for tablets */
+    }
+  }
+
+  .resume-button-container {
+    margin-top: 1rem;
+  }
+
   .resume-btn {
-    background-color: #005bbb;
-    color: white;
-    font-size: 1.1em;
-    padding: 15px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s ease-in-out;
-    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.3);
-  
-    &:hover {
-      background-color: #554dff;
-      transform: scale(1.05);
+    font-size: 1em;
+    padding: 10px 16px;
+  }
+
+  .profile-image {
+    width: 16rem;
+    height: 16rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 1rem;
+    justify-content: center;
+  }
+
+  .name-and-icons h1 {
+    font-size: 2em;
+    line-height: 1.2;
+  }
+
+  .icons-inline {
+    svg {
+      font-size: 1.3em;
     }
   }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .about-section {
-      flex-direction: column;
-      padding: 2rem;
-      background-attachment: scroll;
-      min-height: auto;
-    }
-  
-    .image-wrapper {
-      margin-bottom: 2rem;
-    }
-  
-    .content {
-      text-align: center;
-  
-      h1 {
-        font-size: 2.5em;
-      }
-      p {
-        font-size: 1.2em;
-      }
-  
-      .social_icons {
-        display: flex; 
-        justify-content: center;
-      }
-    }
-  
-    .resume-button-container {
-      margin-top: 1rem;
-    }
-  
-    h1 {
-      font-size: 3em !important;
-    }
-  
-    .resume-btn {
-      font-size: 1em;
-      padding: 10px 16px;
-    }
-  
-    .profile-image {
-      width: 16rem;
-      height: 16rem;
-    }
+
+  .content p {
+    font-size: 1rem;
   }
-  
-  @media (max-width: 480px) {
-    .about-section {
-      padding: 1rem;
-    }
-  
-    .content h1 {
-      font-size: 2em;
-    }
-  
-    .content p {
-      font-size: 1rem;
-    }
-  
-    .profile-image {
-      width: 22rem;
-      height: 20rem;
-    }
+
+  .profile-image {
+    width: 14rem;
+    height: 14rem;
   }
-  
-  @media (max-width: 375px) {
-    h1 {
-      font-size: 2em !important;
-    }
+}
+
+@media (max-width: 375px) {
+  .name-and-icons h1 {
+    font-size: 1.8em !important;
   }
-  
+}

@@ -84,22 +84,7 @@ function Contact() {
           <p className="submit-result">{result}</p>
         )}
 
-        <Box className="social-links">
-          <a
-            href="https://github.com/your_github_profile"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <GitHubIcon fontSize="large" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/your_linkedin_profile"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <LinkedInIcon fontSize="large" />
-          </a>
-        </Box>
+       
       </Box>
     </Box>
   );
